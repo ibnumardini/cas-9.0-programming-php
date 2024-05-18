@@ -7,26 +7,26 @@ $i = str_split($i);
 
 $iter = ceil(count($i) / 4);
 
-$arr = [];
+$group = [];
 $g = -1;
 foreach ($i as $k => $v) {
     if ($k % $iter === 0) {
         $g++;
     }
 
-    $arr[$g][] = $v;
+    $group[$g][] = $v;
 }
 
-$arr1 = [];
-for ($i = 0; $i < count($arr); $i++) {
-    for ($j = 0; $j < count($arr[$i]); $j++) {
-        $arr1[$j][] = $arr[$i][$j];
+$reverse = [];
+for ($i = 0; $i < count($group); $i++) {
+    for ($j = 0; $j < count($group[$i]); $j++) {
+        $reverse[$j][] = $group[$i][$j];
     }
 }
 
-$chipper = "";
-foreach ($arr1 as $k => $v) {
-    $chipper .= implode("", $v);
+$cipher = "";
+foreach ($reverse as $k => $v) {
+    $cipher .= implode("", $v);
 }
 
-echo $chipper;
+echo $cipher;
