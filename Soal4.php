@@ -19,6 +19,8 @@ foreach ($i as $k => $v) {
 
 $reverse = [];
 for ($i = 0; $i < count($group); $i++) {
+    if (count($group[$i]) < $iter) array_push($group[$i], str_repeat(" ", $iter - count($group[$i])));
+
     for ($j = 0; $j < count($group[$i]); $j++) {
         $reverse[$j][] = $group[$i][$j];
     }
