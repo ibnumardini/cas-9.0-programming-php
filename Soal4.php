@@ -1,6 +1,6 @@
 <?php
 
-// input 9 FISKOM LOMBA PROGRAMMING
+// input: 9 FISKOM LOMBA PROGRAMMING
 
 $i = readline();
 $i = str_split($i);
