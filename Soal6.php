@@ -4,7 +4,7 @@
 
 $i = str_split(readline());
 
-$lo = 0;
+$hi = 0;
 
 foreach ($i as $v) {
     if ($v == "M") {
